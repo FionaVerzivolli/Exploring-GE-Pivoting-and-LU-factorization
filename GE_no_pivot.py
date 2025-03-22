@@ -1,3 +1,17 @@
+"""
+This file contains the implementation of the Gaussian Elimination algorithm without any pivoting.
+
+The Gaussian Elimination algorithm is used to solve a system of linear equations of the form Ax = b.
+This version of the algorithm does not perform any pivoting during the elimination process, 
+which can cause instability when dealing with ill-conditioned or singular matrices, as will be 
+observed during testing.
+
+Functions:
+    no_pivot(A, b): Solves the system of linear equations Ax = b using Gaussian Elimination without pivoting.
+    forward_sub(A, b, size): Performs forward substitution on a lower triangular matrix A.
+    back_sub(A, b, size): Performs backward substitution on an upper triangular matrix A.
+    LU_factorization(A): Perform LU factorization on matrix A.
+"""
 import copy
 
 def forward_sub(A: list[list[float]], b: list[float], size: int) -> list[float]:
@@ -36,7 +50,7 @@ def no_pivot(A: list[list[float]], b: list[float]) -> list[float]:
         return
     y = forward_sub(lu, b, len(A))
     x = back_sub(lu, y, len(A))
-    return x
+    return x # our solution to the linear system
 
 
 def LU_factorization(A: list[list[float]]) -> list[list[float]]:

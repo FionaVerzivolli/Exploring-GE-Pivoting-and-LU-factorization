@@ -1,3 +1,17 @@
+"""
+This file contains the implementation of the Gaussian Elimination algorithm with partial pivoting.
+
+Partial pivoting includes selecting the largest element in the column below our current row to use as the pivot 
+during the elimination process. This improves numerical stability, especially when working with matrices that
+ are ill-conditioned.
+
+Functions:
+    partial_pivot(A, b): Solves the system of linear equations Ax = b using Gaussian Elimination with partial pivoting.
+    forward_partial(A, b, piv, size): Performs forward substitution on a lower triangular matrix A.
+    backward_partial(A, y, piv, size): Performs backward substitution on an upper triangular matrix A.
+
+Note that there is no LU factorization function in this file as it is dealt with in the partial_pivot function.
+"""
 import copy
 
 def forward_partial(A: list[list[float]], b: list[float], piv: list[int], size: int) -> list[float]:
@@ -62,4 +76,4 @@ def partial_pivot(A: list[list[float]], b: list[float]) -> list[float]:
     y = forward_partial(A, b, piv, len(A)) # start with forward substitution,
     x = backward_partial(A, y, piv, len(A)) # then backward substitution.
 
-    return x
+    return x # our solution to the linear system

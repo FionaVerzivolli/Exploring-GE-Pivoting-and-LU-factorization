@@ -1,3 +1,19 @@
+"""
+This file contains the implementation of the Gaussian Elimination algorithm with complete pivoting.
+
+Complete pivoting means selecting the largest element in the entire uneliminated matrix (both row and column) to use as 
+the pivot during the elimination process. This method provides the best and highest numerical stability, but requires 
+more computational resources than partial pivoting. Because of this I will use two vectors for rows and columns respectively
+to track row and column swaps.
+
+Functions:
+    complete_pivot(A, b): Solves the system of linear equations Ax = b using Gaussian Elimination with complete pivoting.
+    forward_complete(A, b, rowpiv, colpiv, size): Performs forward substitution on a lower triangular matrix A.
+    backward_complete(A, y, rowpiv, colpiv, size): Performs backward substitution on an upper triangular matrix A.
+
+Note that there is no LU factorization function in this file, for the same reason as GE_partial_pivot.py,
+as it is dealt with in the complete_pivot function.
+"""
 import copy
 
 def forward_complete(A: list[list[float]], b, rowpiv: list[int],
@@ -55,4 +71,4 @@ def complete_pivot(A: list[list[float]], b: list[float]) -> list[float]:
     y = forward_complete(A, b, rowpiv, colpiv, size)
     x = backward_complete(A, y, rowpiv, colpiv, size)
 
-    return x
+    return x # our solution to the linear system
