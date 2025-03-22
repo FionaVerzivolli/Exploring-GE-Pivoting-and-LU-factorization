@@ -1,3 +1,17 @@
+"""
+This file provides functions to visualize and analyze the performance of Gaussian Elimination algorithms.
+
+The main goal of this module is to track and display the residuals, conditioning numbers, and errors for 
+the various Gaussian Elimination methods (no pivoting, partial pivoting, and complete pivoting) using a
+ variety of matrices. Results are presented in a table format and a bar chart to compare performance across algorithms.
+
+Functions:
+    two_norm(a): Computes the euclidean (L2) norm of a vector.
+    vector_subtraction(a, b): Computes the element wise subtraction of two vectors.
+    matrix_multiply(A, x): Performs matrix vector multiplication.
+    visualize_results(): Displays a table with test results and a bar chart comparing errors of different Gaussian Elimination methods.
+"""
+
 import unittest
 import numpy as np
 import pandas as pd

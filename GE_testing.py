@@ -1,3 +1,29 @@
+"""
+This file contains unit tests for different Gaussian Elimination algorithms, which are Gaussian Elimination
+without pivoting, with partial pivoting, and with complete pivoting.
+
+The tests validate the correctness of the algorithms using various test cases, including:
+    - Known matrices (with predefined solutions).
+    - Randomly generated matrices (to check algorithm robustness).
+    - Ill conditioned matrices (to test the algorithm's performance with difficult to solve systems).
+    - Singular matrices (to test the algorithm's handling of non invertible systems).
+    - Sparse matrices and large random matrices for performance testing.
+
+Unit tests use `unittest` framework to assert that the results produced by the Gaussian Elimination methods
+are correct within a specified tolerance.
+
+Functions:
+    setUp(): Initializes test cases for the Gaussian Elimination tests.
+    test_known_matrices(): Tests Gaussian Elimination algorithms with predefined matrices.
+    test_random_matrices(): Tests Gaussian Elimination algorithms with randomly generated matrices.
+    test_special_matrix(): Tests with a specially structured matrix.
+    test_ill_conditioned_matrix(): Tests with an ill conditioned matrix.
+    test_singular_matrix(): Tests handling of singular matrices.
+    test_sparse_matrix(): Tests with sparse matrices.
+    test_large_random_matrix(): Tests with a large random matrix.
+"""
+
+
 import unittest
 import numpy as np
 
