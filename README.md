@@ -1,7 +1,7 @@
 # Exploring-GE-Pivoting-and-LU-factorization
 # Gaussian Elimination Algorithms
 
-This repository includes three different implementations of the Gaussian Elimination algorithm, each having different pivoting strategies. The algorithms in each file are inspired by the teachings of the CSC336 course (Numerical Methods) offered at the University of Toronto, and are based off of chapter 2 of Michael Heath's *Scientific Computing* textbook, titled *Systems of Linear Equations*. The repository includes unit tests to test correctness and functionality, as well as visualizations made using Pandas to analyze the performance of each pivoting method.
+This repository includes three different implementations of the Gaussian Elimination algorithm, each having different pivoting strategies. The algorithms in each file are inspired by the teachings of the CSC336 course (Numerical Methods) offered at the University of Toronto, and are based off of chapter 2 of Michael Heath's *Scientific Computing* textbook, titled *Systems of Linear Equations*. The repository includes unit tests using NumPy to test correctness and functionality, as well as visualizations made using Pandas to analyze the performance of each pivoting method.
 
 ## Overview
 
