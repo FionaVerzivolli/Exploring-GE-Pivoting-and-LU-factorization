@@ -19,7 +19,7 @@ The repository also includes:
 ### 1. No Pivoting (`GE_no_pivot.py`)
 This file implements Gaussian Elimination without any pivoting. This method is computationally less expensive but can suffer from numerical instability, especially when solving ill conditioned or singular systems.
 
-### 2. Partial Pivoting (`GE_partial_pivoti.py`)
+### 2. Partial Pivoting (`GE_partial_pivot.py`)
 In this version, the algorithm selects the largest element in each column as the pivot. This helps to improve numerical stability, especially for ill conditioned matrices. To reduce computational load I will be using a pivot vector to keep track of row swaps.
 
 ### 3. Complete Pivoting (`GE_complete_pivoting.py`)
